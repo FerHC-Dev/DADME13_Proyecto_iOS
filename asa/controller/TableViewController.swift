@@ -38,7 +38,21 @@ class TableViewController: UITableViewController {
             }
         case 1:
             if let navigationController = self.navigationController {
-                let destinoVC = storyboard?.instantiateViewController(withIdentifier: "ServicesSegue")
+                let destinoVC = storyboard?.instantiateViewController(withIdentifier: "ServicesView")
+                navigationController.pushViewController(destinoVC!, animated: true)
+            } else {
+                print("Error: El controlador no está dentro de un UINavigationController.")
+            }
+        case 2:
+            if let navigationController = self.navigationController {
+                let destinoVC = storyboard?.instantiateViewController(withIdentifier: "DirectoryView")
+                navigationController.pushViewController(destinoVC!, animated: true)
+            } else {
+                print("Error: El controlador no está dentro de un UINavigationController.")
+            }
+        case 3:
+            if let navigationController = self.navigationController {
+                let destinoVC = storyboard?.instantiateViewController(withIdentifier: "AboutView")
                 navigationController.pushViewController(destinoVC!, animated: true)
             } else {
                 print("Error: El controlador no está dentro de un UINavigationController.")
