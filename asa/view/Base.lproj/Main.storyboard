@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,7 +16,7 @@
             <objects>
                 <tableViewController id="H0y-Xp-0sK" customClass="TableViewController" customModule="asa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="FrF-OS-R0d">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -219,6 +220,21 @@
             </objects>
             <point key="canvasLocation" x="1541" y="-1764"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sKa-QB-lFI">
+            <objects>
+                <viewController id="qn8-hJ-HtB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsn-Yf-08M">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SBL-7A-Krl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBk-bC-0Fi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="-1023"/>
+        </scene>
         <!--Directory View Controller-->
         <scene sceneID="Lj8-hd-xZE">
             <objects>
@@ -242,6 +258,13 @@
                                     <constraint firstAttribute="height" constant="64" id="YM2-aN-8aI"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xa-su-CdB">
+                                <rect key="frame" x="154" y="200" width="67" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="PrimaryColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJk-Ru-ibg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -407,7 +430,7 @@
                                     <constraint firstAttribute="width" constant="120" id="vnN-d5-kYT"/>
                                 </constraints>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8Z-Xq-ha1">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="C8Z-Xq-ha1">
                                 <rect key="frame" x="10" y="169.33333333333331" width="373" height="628.66666666666674"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-bc-53V" userLabel="tarjeta">
@@ -639,7 +662,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xMa-8y-yrV">
                                 <rect key="frame" x="40" y="234" width="313" height="364"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="220" translatesAutoresizingMaskIntoConstraints="NO" id="WYm-iv-ypd" customClass="NoticeCell" customModule="asa" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="220" translatesAutoresizingMaskIntoConstraints="NO" id="WYm-iv-ypd" customClass="NoticeCell" customModule="asa" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="313" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WYm-iv-ypd" id="EtB-T7-5aO">
@@ -776,31 +799,34 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0i0-Ig-sk0"/>
+        <segue reference="pJe-8y-jim"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="aeromexico" width="2000" height="2000"/>
-        <image name="agfc" width="1048" height="348"/>
+        <image name="aeromexico" width="666.66668701171875" height="666.66668701171875"/>
+        <image name="agfc" width="349.33334350585938" height="116"/>
         <image name="airplane.departure" catalog="system" width="128" height="84"/>
-        <image name="asaedificioa" width="768" height="576"/>
+        <image name="asaedificioa" width="256" height="192"/>
         <image name="exclamationmark.octagon" catalog="system" width="128" height="112"/>
-        <image name="gatam" width="230" height="70"/>
+        <image name="gatam" width="76.666664123535156" height="23.333333969116211"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
-        <image name="iata" width="640" height="640"/>
+        <image name="iata" width="213.33332824707031" height="213.33332824707031"/>
         <image name="img_ciiasa" width="60" height="60"/>
         <image name="img_consulta" width="60" height="60"/>
         <image name="img_serv_aero" width="60" height="60"/>
         <image name="img_tanque" width="60" height="60"/>
         <image name="img_tarifas" width="94" height="60"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
-        <image name="logo" width="850" height="336"/>
+        <image name="logo" width="283.33334350585938" height="112"/>
         <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <image name="person.text.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
-        <image name="senasa" width="630" height="320"/>
-        <image name="seneam" width="1711" height="1289"/>
-        <image name="unamipn" width="1500" height="479"/>
-        <image name="volaris" width="1048" height="348"/>
+        <image name="senasa" width="210" height="106.66666412353516"/>
+        <image name="seneam" width="570.33331298828125" height="429.66665649414062"/>
+        <image name="unamipn" width="500" height="159.66667175292969"/>
+        <image name="volaris" width="349.33334350585938" height="116"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.37647058823529411" green="0.52549019607843139" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
