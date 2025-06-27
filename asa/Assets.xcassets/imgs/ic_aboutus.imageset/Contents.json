@@ -9,6 +9,7 @@
       "scale" : "2x"
     },
     {
+      "compression-type" : "automatic",
       "filename" : "ic_aboutus.png",
       "idiom" : "universal",
       "scale" : "3x"
