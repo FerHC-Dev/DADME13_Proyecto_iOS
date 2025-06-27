@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        //Start network monitoring
+        NetworkMonitor.shared.startMonitoring()
         return true
     }
 
@@ -75,6 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        NetworkMonitor.shared.stopMonitoring()
     }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutViewController: UIViewController {
 
@@ -16,15 +17,22 @@ class AboutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnSaberMas(_ sender: UIButton) {
+        if isConnected{
+            
+            if let url = URL(string: "https://www.gob.mx/asa"){
+                
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+                
+                let safariViewController = SFSafariViewController(url: url, configuration: config)
+                self.present(safariViewController, animated: true)
+            }
+        }else{
+            print("Connection error")
+        }
     }
-    */
+    
+
 
 }
