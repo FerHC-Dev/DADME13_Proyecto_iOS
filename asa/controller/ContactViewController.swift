@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 03/05/25.
-//
-
 import UIKit
 
 class ContactViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
@@ -12,16 +5,20 @@ class ContactViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var textField: UITextView!
+    @IBOutlet weak var inputName: UITextField!
+    @IBOutlet weak var inputPhone: UITextField!
+    @IBOutlet weak var inputEmail: UITextField!
+    @IBOutlet weak var inputMessage: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        textField.delegate = self
-        textField.text = "Dinos tu mensaje"
-        textField.textColor = .lightGray
         
         // Delegados de los campos
         setupDelegates(for: scrollView)
+        setupDelegates(for: textField)
+        
+        textField.text = "Dinos tu mensaje"
+        textField.textColor = .lightGray
         
         // Observadores del teclado
         NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillShow),name: UIResponder.keyboardWillShowNotification,object: nil)
@@ -31,6 +28,17 @@ class ContactViewController: UIViewController, UITextViewDelegate, UITextFieldDe
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    @IBAction func btnEnviar(_ sender: UIButton) {
+        inputName.text = inputName.text?.trimmingCharacters(in: .whitespaces)
+        inputPhone.text = inputPhone.text?.trimmingCharacters(in: .whitespaces)
+        inputEmail.text = inputEmail.text?.trimmingCharacters(in: .whitespaces)
+        inputMessage.text = inputMessage.text?.trimmingCharacters(in: .whitespaces)
+        if validate(){
+            
+        }
+        
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -86,6 +94,61 @@ class ContactViewController: UIViewController, UITextViewDelegate, UITextFieldDe
                 setupDelegates(for: subview)
             }
         }
+    }
+    
+    func validate() -> Bool {
+        var valide = false
+        if(!isEmptyOrWhitespace(inputName.text) && !isEmptyOrWhitespace(inputEmail.text) && !isEmptyOrWhitespace(inputPhone.text) && !isEmptyOrWhitespace(inputMessage.text)){
+            if isValidEmail(inputEmail.text!){
+                if isNumbersOnly(inputPhone.text!){
+                    valide = true
+                }else{
+                    inputPhone.text = ""
+                    let ac = UIAlertController(title: "Hola", message: "Ingresa un número de contacto valido por favor.", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .default){
+                        alertaction in
+                    }
+                    ac.addAction(action)
+                    self.present(ac,animated: true)
+                }
+            }else{
+                inputEmail.text = ""
+                let ac = UIAlertController(title: "Hola", message: "Ingresa un correo valido por favor.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default){
+                    alertaction in
+                }
+                ac.addAction(action)
+                self.present(ac,animated: true)
+            }
+        }else{
+            let ac = UIAlertController(title: "Hola", message: "Favor de llenar todos los campos.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default){
+                alertaction in
+            }
+            ac.addAction(action)
+            self.present(ac,animated: true)
+        }
+        return valide
+    }
+    
+    
+    func isEmptyOrWhitespace(_ string: String?) -> Bool {
+        guard let string = string else {
+            return true 
+        }
+        return string.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return predicate.evaluate(with: email)
+    }
+    
+    func isNumbersOnly(_ inputString: String) -> Bool {
+        let numbersOnlyRegEx = "[0-9]*"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", numbersOnlyRegEx)
+        return predicate.evaluate(with: inputString) && inputString.count == 10
     }
 
 }

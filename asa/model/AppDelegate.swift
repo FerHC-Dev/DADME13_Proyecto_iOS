@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  asa
-//
-//  Created by Fernando Hernández on 03/05/25.
-//
-
 import UIKit
 import CoreData
 

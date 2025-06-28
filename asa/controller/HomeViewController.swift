@@ -1,10 +1,3 @@
-//
-//  HomeViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 09/05/25.
-//
-
 import UIKit
 
 class HomeViewController: UIViewController {

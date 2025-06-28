@@ -1,10 +1,3 @@
-//
-//  TarifasViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 27/06/25.
-//
-
 import UIKit
 import WebKit
 

@@ -1,10 +1,3 @@
-//
-//  NetworkMonitor.swift
-//  NetworkMonitor
-//
-//  Created by Rafael Gonzalez on 15/04/25.
-//
-
 import Foundation
 import Network
 

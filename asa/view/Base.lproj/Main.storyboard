@@ -16,7 +16,7 @@
             <objects>
                 <tableViewController id="H0y-Xp-0sK" customClass="TableViewController" customModule="asa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="FrF-OS-R0d">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -549,6 +549,9 @@
                                                 <rect key="frame" x="161" y="545" width="71" height="35"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Enviar"/>
+                                                <connections>
+                                                    <action selector="btnEnviar:" destination="qn8-hJ-HtB" eventType="touchUpInside" id="yvl-cu-FUo"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -560,7 +563,7 @@
                                             <constraint firstItem="cZI-5D-dQV" firstAttribute="leading" secondItem="hZU-eC-P3D" secondAttribute="leading" constant="29" id="GZW-ZF-WAx"/>
                                             <constraint firstAttribute="trailing" secondItem="ozh-NM-D7E" secondAttribute="trailing" constant="29" id="KTg-xE-U7J"/>
                                             <constraint firstItem="bUm-dN-L3b" firstAttribute="leading" secondItem="hZU-eC-P3D" secondAttribute="leading" constant="29" id="OcV-B1-AIJ"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aov-Qb-lF9" secondAttribute="trailing" symbolic="YES" id="R0i-gF-ndz"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aov-Qb-lF9" secondAttribute="trailing" constant="20" symbolic="YES" id="R0i-gF-ndz"/>
                                             <constraint firstItem="ozh-NM-D7E" firstAttribute="top" secondItem="EJ6-QE-rP6" secondAttribute="bottom" constant="30" id="RdY-zo-3y5"/>
                                             <constraint firstAttribute="trailing" secondItem="NpB-Q2-fEg" secondAttribute="trailing" constant="29" id="THz-RD-ezo"/>
                                             <constraint firstAttribute="trailing" secondItem="bUm-dN-L3b" secondAttribute="trailing" constant="29" id="XM5-dI-Ng7"/>
@@ -599,6 +602,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="HS8-3x-aiH"/>
                     <connections>
+                        <outlet property="inputEmail" destination="bUm-dN-L3b" id="qEQ-hz-Pog"/>
+                        <outlet property="inputMessage" destination="NpB-Q2-fEg" id="Gc8-so-IaT"/>
+                        <outlet property="inputName" destination="ozh-NM-D7E" id="1n6-pE-nhU"/>
+                        <outlet property="inputPhone" destination="cZI-5D-dQV" id="cVQ-cB-Ciz"/>
                         <outlet property="scrollView" destination="JXa-RI-ga6" id="1Gy-T7-8im"/>
                         <outlet property="textField" destination="NpB-Q2-fEg" id="GtN-YD-gXE"/>
                     </connections>
@@ -1443,7 +1450,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pJe-8y-jim"/>
+        <segue reference="0i0-Ig-sk0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="aeromexico" width="666.66668701171875" height="666.66668701171875"/>

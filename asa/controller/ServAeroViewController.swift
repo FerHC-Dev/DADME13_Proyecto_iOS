@@ -1,10 +1,3 @@
-//
-//  ServAeroViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 13/06/25.
-//
-
 import UIKit
 
 class ServAeroViewController: UIViewController {

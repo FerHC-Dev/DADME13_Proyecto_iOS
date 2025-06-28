@@ -1,10 +1,3 @@
-//
-//  ViewControllerExtension.swift
-//  NetworkMonitor
-//
-//  Created by Rafael Gonzalez on 16/04/25.
-//
-
 import Foundation
 import UIKit
 

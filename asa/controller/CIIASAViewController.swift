@@ -1,10 +1,3 @@
-//
-//  CIIASAViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 26/06/25.
-//
-
 import UIKit
 
 class CIIASAViewController: UIViewController {

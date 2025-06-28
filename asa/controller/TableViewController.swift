@@ -1,10 +1,3 @@
-//
-//  TableViewController.swift
-//  asa
-//
-//  Created by Fernando Hernández on 08/05/25.
-//
-
 import UIKit
 
 class TableViewController: UITableViewController {
