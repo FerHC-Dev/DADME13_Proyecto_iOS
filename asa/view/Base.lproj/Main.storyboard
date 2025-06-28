@@ -16,7 +16,7 @@
             <objects>
                 <tableViewController id="H0y-Xp-0sK" customClass="TableViewController" customModule="asa" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="FrF-OS-R0d">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -501,7 +501,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" delaysContentTouches="NO" canCancelContentTouches="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-RI-ga6">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" delaysContentTouches="NO" canCancelContentTouches="NO" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-RI-ga6">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZU-eC-P3D">
@@ -710,6 +710,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Llamar"/>
+                                <connections>
+                                    <action selector="btnCall:" destination="D62-cr-QXb" eventType="touchUpInside" id="veg-na-5Tu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJk-Ru-ibg"/>
@@ -1049,12 +1052,18 @@
                                                 <buttonConfiguration key="configuration" style="tinted" imagePlacement="leading" title="Aviso de Privacidad" subtitle="" imagePadding="10">
                                                     <imageReference key="image" image="exclamationmark.octagon" catalog="system" variableValue="0.0"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btnAvisodePriv:" destination="CTV-jw-hwt" eventType="touchUpInside" id="Uax-ac-JUM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtH-QZ-zQi">
                                                 <rect key="frame" x="0.0" y="34.333333333333371" width="363" height="34.333333333333343"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="questionmark.circle" catalog="system" title="Terminos y Condiciones" imagePadding="10"/>
+                                                <connections>
+                                                    <action selector="btnTermYCond:" destination="CTV-jw-hwt" eventType="touchUpInside" id="W6K-hJ-dcm"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aeropuertos y Servicios Auxiliares V1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQn-Hh-tDa">
                                                 <rect key="frame" x="0.0" y="68.666666666666629" width="363" height="20.333333333333329"/>
@@ -1450,7 +1459,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0i0-Ig-sk0"/>
+        <segue reference="pJe-8y-jim"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="aeromexico" width="666.66668701171875" height="666.66668701171875"/>

@@ -13,7 +13,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "Inicio"
+        self.navigationItem.title = Constants.moduleName.home
         // Do any additional setup after loading the view.
         
         tvNotices.dataSource = self

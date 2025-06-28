@@ -5,7 +5,7 @@ class ServicesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "Servicios"
+        self.navigationItem.title = Constants.moduleName.services
         // Do any additional setup after loading the view.
     }
     

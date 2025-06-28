@@ -4,7 +4,7 @@ class CIIASAViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = Constants.moduleName.ciiasa
         // Do any additional setup after loading the view.
     }
     

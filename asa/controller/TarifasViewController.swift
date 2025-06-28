@@ -10,6 +10,8 @@ class TarifasViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.title = Constants.moduleName.tariffs
+        
         // Do any additional setup after loading the view.
         webView.navigationDelegate = self
         activityIndicator.style = .large

@@ -4,7 +4,7 @@ class ServAeroViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = Constants.moduleName.servAerportes
         // Do any additional setup after loading the view.
     }
     
