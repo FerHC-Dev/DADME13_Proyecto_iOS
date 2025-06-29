@@ -4,7 +4,7 @@ struct Constants{
     
     struct Urls{
         static let asaHome = "https://www.gob.mx/asa"
-        static let tariffs = ""
+        static let tariffs = "vuhvhv"
     }
     
     struct moduleName{
