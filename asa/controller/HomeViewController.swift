@@ -40,6 +40,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource, Notice
     }
     
     func showNoticeDetail(_ celda: NoticeCell) {
-        print("Celda presionada \(celda)")
+        guard let indexPath = tvNotices.indexPath(for: celda) else { return }
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let showDetailNotice = sb.instantiateViewController(identifier: "idNoticeDetail") as? NoticeDetailViewController {
+
+            showDetailNotice.notice = arrayNotices[indexPath.row]
+            
+            navigationController?.pushViewController(showDetailNotice, animated: true)
+        }
+        
+        
+        
+        
     }
 }
