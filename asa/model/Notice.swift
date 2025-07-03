@@ -1,4 +1,4 @@
-struct Notice {
+struct Notice: Codable {
     let id : Int
     let title : String
     let image: String
