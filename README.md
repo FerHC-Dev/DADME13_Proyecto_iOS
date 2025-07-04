@@ -1,4 +1,4 @@
-Codigo fuente del proytecto para el diplomado de desarrollo móvil 13ra generación.
+Codigo fuente del proyecto para el diplomado de desarrollo móvil 13ra generación.
 
 *Versión iOS*
 
